@@ -1,0 +1,74 @@
+# Copyright (C) 2026 M. Burak Şentürk <https://buraksenturk.net> - GPL-3.0-or-later with attribution terms (ATTRIBUTION.md)
+Module510777Name=VAT Withholding (Türkiye)
+Module510777Desc=KDV tevkifatı line and accounting mapping on supplier and customer invoices
+TRTevkifatTab=Withholding
+TRTevkifatSetup=VAT withholding setup
+TRTevkifatSetupDesc=Withholding is booked as a single negative invoice line (VAT 0%%); the invoice total shows the payable amount and the line is mapped to the account chosen by rate. No core files are touched.
+
+TRTevkifatSectionScope=Scope
+TRTevkifatSectionAccounts=Accounting accounts
+TRTevkifatSectionLine=Withholding line
+
+TRTEVKIFAT_SUPPLIER_ENABLED=Withholding on supplier invoices
+TRTEVKIFAT_SUPPLIER_ENABLEDHelp="Withholding" tab and line on purchase invoices.
+TRTEVKIFAT_CUSTOMER_ENABLED=Withholding on customer invoices
+TRTEVKIFAT_CUSTOMER_ENABLEDHelp="Withholding" tab and line on sales invoices. With the İşNet e-Fatura module the withholding is also written into the UBL.
+TRTEVKIFAT_ALLOW_RATE_OVERRIDE=Allow a rate different from the code default
+TRTEVKIFAT_ALLOW_RATE_OVERRIDEHelp=When off, the rate is always the one published for the selected GİB code.
+TRTEVKIFAT_SUPPLIER_ACCOUNTS=Rate → account (purchases)
+TRTEVKIFAT_SUPPLIER_ACCOUNTSHelp=One "rate=account" per line: 20=360.50.002 (2/10), 30=360.50.001 (3/10)…
+TRTEVKIFAT_SUPPLIER_ACCOUNT_DEFAULT=Account for unmapped rates (purchases)
+TRTEVKIFAT_SUPPLIER_ACCOUNT_DEFAULTHelp=Used when a rate not listed above is applied.
+TRTEVKIFAT_CUSTOMER_ACCOUNT=Withholding account (sales)
+TRTEVKIFAT_CUSTOMER_ACCOUNTHelp=VAT withheld by the customer; sub-account of output VAT (e.g. 391.10.020).
+TRTEVKIFAT_LINE_LABEL=Line description
+TRTEVKIFAT_LINE_LABELHelp=Placeholders: %%RATE%% (3/10), %%CODE%% (625), %%DESC%% (code description).
+TRTEVKIFAT_LINE_POSITION=Line position
+TRTEVKIFAT_LINE_POSITIONHelp=Append the withholding line at the end or insert it first.
+TRTevkifatPosLast=Last line
+TRTevkifatPosFirst=First line
+
+TRTevkifatAccountCheck=Account check (active chart)
+TRTevkifatAccountOk=Exists in chart
+TRTevkifatAccountMissing=NOT in chart — withholding cannot be applied
+TRTevkifatCodeList=GİB withholding codes
+
+TRTevkifatCode=Withholding code
+TRTevkifatCodeHelp=GİB code (601–627). The line is added from the Withholding tab of this module.
+TRTevkifatRate=Withholding rate
+TRTevkifatRateHelp=Percent. Empty = code default.
+TRTevkifatAmount=VAT withheld
+TRTevkifatLine=Withholding line id
+TRTevkifatRateHint=Selecting a code fills the published rate; 30 = 3/10.
+
+TRTevkifatCalculation=Calculation (excluding the withholding line)
+TRTevkifatWithheld=VAT withheld (%s)
+TRTevkifatPayable=Payable amount
+TRTevkifatApply=Apply withholding
+TRTevkifatReapply=Recalculate
+TRTevkifatRemove=Remove withholding
+TRTevkifatApplied=Withholding line added; invoice total updated.
+TRTevkifatRemoved=Withholding line removed.
+TRTevkifatOnlyDraft=Withholding can only be changed on a draft invoice.
+TRTevkifatDisabledForType=Withholding is disabled for this invoice type in setup.
+
+TRTevkifatStateApplied=Applied
+TRTevkifatStateStale=Invoice lines changed, recalculate
+TRTevkifatStateLineMissing=Code set but no withholding line — click "Apply withholding"
+TRTevkifatStateNone=No withholding
+
+TRTevkifatErrUnknownCode=Unknown withholding code: %s
+TRTevkifatErrRateLocked=Rate is locked by setup; the code rate is %s
+TRTevkifatErrRateRange=Rate must be between 0 and 100
+TRTevkifatErrNotDraft=Invoice is not a draft
+TRTevkifatErrNoVat=Invoice has no VAT; nothing to withhold
+TRTevkifatErrAccountMissing=Account %s does not exist in the active chart. Create it or fix the setup.
+
+TRTevkifatAuditApplied=Withholding applied: code %s, rate %s, amount %s
+TRTevkifatAuditDetail=Total VAT %s; account %s; payable %s
+TRTevkifatAuditRemoved=Withholding removed (code %s, amount %s)
+
+TRTEVKIFAT_BLOCK_VALIDATE_IF_STALE=Block validation when withholding is inconsistent
+TRTEVKIFAT_BLOCK_VALIDATE_IF_STALEHelp=Refuse validation when a code is set without a line, or the amount no longer matches the lines; recalculate first.
+TRTevkifatErrValidateLineMissing=Withholding code (%s) is set but there is no withholding line. Apply it from the Withholding tab or clear the code.
+TRTevkifatErrValidateStale=Withholding line is out of date (stored %s, expected from lines %s). Recalculate from the Withholding tab.

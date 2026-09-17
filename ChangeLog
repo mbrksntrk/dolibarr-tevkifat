@@ -1,0 +1,18 @@
+2.1.0 (2026-09-17)
+- Lisans: GPL-3.0-or-later + yazar atfı şartı (ATTRIBUTION.md); yazar ve proje bilgileri README/modül tanımında.
+- Dolibarr 24 AI/MCP entegrasyonu: tevkifat_codes, tevkifat_info, tevkifat_apply, tevkifat_remove araçları (addMcpTools hook, kullanıcı yetkileriyle).
+
+2.0.1 (2026-09-17)
+- Onay koruması: kod seçili ama satır yoksa ya da satırlar değiştiği için tutar güncel değilse fatura onayı engellenir (ayar: TRTEVKIFAT_BLOCK_VALIDATE_IF_STALE).
+- Ek alanlar (kod/oran/tutar) fatura formlarında düzenlenemez, yalnız görünür; değişiklik yalnızca Tevkifat sekmesinden (tutarsız durum oluşmasın).
+- Alacak dekontları (negatif KDV) desteklenir.
+- Oran alanında virgüllü giriş (30,5) kabul edilir.
+- Sekmede yöneticiler için ayar sayfası bağlantısı; modül yükseltmede ek alan tanımları güncellenir.
+
+2.0.0 (2026-09-17)
+- Sıfırdan yazıldı. Tevkifat = özel kodlu (99) negatif fatura satırı; hook/çekirdek müdahalesi yok.
+- Alış ve satış faturaları; 601–627 GİB kod sözlüğü ve tebliğ oranları.
+- Oran → muhasebe hesabı eşlemesi, satır açıklaması, satır yeri, oran ezme izni: hepsi ayarlarda.
+- Fatura ek alanları (kod, oran, tutar, satır id); Olaylar sekmesine denetim kaydı; ayar değişiklikleri güvenlik günlüğünde.
+- Ayar sayfasında hesap planı kontrolü ve kod listesi.
+- v1 kalıntı yetki/menü temizliği; admin/setup.php'deki HTTP 500 (parse hatası) giderildi.

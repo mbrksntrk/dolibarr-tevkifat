@@ -1,0 +1,74 @@
+# Copyright (C) 2026 M. Burak Şentürk <https://buraksenturk.net> - GPL-3.0-or-later with attribution terms (ATTRIBUTION.md)
+Module510777Name=KDV Tevkifatı (TR)
+Module510777Desc=Alış ve satış faturalarında KDV tevkifatı satırı ve muhasebe eşlemesi
+TRTevkifatTab=Tevkifat
+TRTevkifatSetup=KDV Tevkifatı ayarları
+TRTevkifatSetupDesc=Tevkifat, faturaya eklenen tek bir negatif satırla (KDV %%0) işlenir; fatura toplamı ödenecek tutarı gösterir, satır orana göre eşlenen hesaba gider. Çekirdek dosyalara müdahale yoktur.
+
+TRTevkifatSectionScope=Kapsam
+TRTevkifatSectionAccounts=Muhasebe hesapları
+TRTevkifatSectionLine=Tevkifat satırı
+
+TRTEVKIFAT_SUPPLIER_ENABLED=Tedarikçi faturalarında tevkifat
+TRTEVKIFAT_SUPPLIER_ENABLEDHelp=Alış faturalarında "Tevkifat" sekmesi ve satır ekleme.
+TRTEVKIFAT_CUSTOMER_ENABLED=Müşteri faturalarında tevkifat
+TRTEVKIFAT_CUSTOMER_ENABLEDHelp=Satış faturalarında "Tevkifat" sekmesi ve satır ekleme. İşNet e-Fatura modülü yüklüyse tevkifat bilgisi UBL'ye de yazılır.
+TRTEVKIFAT_ALLOW_RATE_OVERRIDE=Kod varsayılanından farklı oran girilebilsin
+TRTEVKIFAT_ALLOW_RATE_OVERRIDEHelp=Kapalıysa oran her zaman seçilen GİB kodunun tebliğdeki oranıdır.
+TRTEVKIFAT_SUPPLIER_ACCOUNTS=Oran → hesap (alış)
+TRTEVKIFAT_SUPPLIER_ACCOUNTSHelp=Her satır "oran=hesap": 20=360.50.002 (2/10), 30=360.50.001 (3/10)… Sorumlu sıfatıyla ödenecek KDV hesapları.
+TRTEVKIFAT_SUPPLIER_ACCOUNT_DEFAULT=Eşleşmeyen oran için hesap (alış)
+TRTEVKIFAT_SUPPLIER_ACCOUNT_DEFAULTHelp=Listede olmayan bir oranla tevkifat uygulanırsa kullanılır.
+TRTEVKIFAT_CUSTOMER_ACCOUNT=Tevkifat hesabı (satış)
+TRTEVKIFAT_CUSTOMER_ACCOUNTHelp=Satış faturasında alıcının kestiği KDV; hesaplanan KDV'nin alt hesabı (ör. 391.10.020).
+TRTEVKIFAT_LINE_LABEL=Satır açıklaması
+TRTEVKIFAT_LINE_LABELHelp=%%RATE%% (3/10), %%CODE%% (625), %%DESC%% (kod açıklaması) yer tutucuları kullanılabilir.
+TRTEVKIFAT_LINE_POSITION=Satırın yeri
+TRTEVKIFAT_LINE_POSITIONHelp=Tevkifat satırı faturanın sonuna mı başına mı eklensin.
+TRTevkifatPosLast=Son satır
+TRTevkifatPosFirst=İlk satır
+
+TRTevkifatAccountCheck=Hesap kontrolü (aktif hesap planı)
+TRTevkifatAccountOk=Hesap planında var
+TRTevkifatAccountMissing=Hesap planında YOK — tevkifat uygulanamaz
+TRTevkifatCodeList=GİB tevkifat kodları (KDV Genel Uygulama Tebliği)
+
+TRTevkifatCode=Tevkifat kodu
+TRTevkifatCodeHelp=GİB tevkifat kodu (601–627). Fatura kartından değil, Tevkifat sekmesinden uygulanır.
+TRTevkifatRate=Tevkifat oranı
+TRTevkifatRateHelp=Yüzde. Boşsa kodun tebliğdeki oranı.
+TRTevkifatAmount=Tevkif edilen KDV
+TRTevkifatLine=Tevkifat satırı id
+TRTevkifatRateHint=Kod seçince tebliğ oranı gelir; 30 = 3/10.
+
+TRTevkifatCalculation=Hesaplama (tevkifat satırı hariç)
+TRTevkifatWithheld=Tevkif edilen KDV (%s)
+TRTevkifatPayable=Ödenecek tutar
+TRTevkifatApply=Tevkifat uygula
+TRTevkifatReapply=Yeniden hesapla
+TRTevkifatRemove=Tevkifatı kaldır
+TRTevkifatApplied=Tevkifat satırı eklendi; fatura toplamı güncellendi.
+TRTevkifatRemoved=Tevkifat satırı kaldırıldı.
+TRTevkifatOnlyDraft=Tevkifat yalnızca taslak faturada eklenip kaldırılabilir. Değişiklik için faturayı taslağa çevirin.
+TRTevkifatDisabledForType=Bu fatura türü için tevkifat ayarlarda kapalı.
+
+TRTevkifatStateApplied=Uygulandı
+TRTevkifatStateStale=Fatura satırları değişmiş, yeniden hesaplayın
+TRTevkifatStateLineMissing=Kod seçili ama tevkifat satırı yok — "Tevkifat uygula" deyin
+TRTevkifatStateNone=Tevkifat yok
+
+TRTevkifatErrUnknownCode=Bilinmeyen tevkifat kodu: %s
+TRTevkifatErrRateLocked=Oran değiştirilemez (ayar); kodun oranı %s
+TRTevkifatErrRateRange=Oran 0–100 arasında olmalı
+TRTevkifatErrNotDraft=Fatura taslak değil
+TRTevkifatErrNoVat=Faturada KDV yok; tevkifat hesaplanamaz
+TRTevkifatErrAccountMissing=%s hesabı aktif hesap planında yok. Hesabı açın ya da ayarları düzeltin.
+
+TRTevkifatAuditApplied=Tevkifat uygulandı: kod %s, oran %s, tutar %s
+TRTevkifatAuditDetail=Toplam KDV %s; hesap %s; ödenecek %s
+TRTevkifatAuditRemoved=Tevkifat kaldırıldı (kod %s, tutar %s)
+
+TRTEVKIFAT_BLOCK_VALIDATE_IF_STALE=Tevkifat tutarsızsa onayı engelle
+TRTEVKIFAT_BLOCK_VALIDATE_IF_STALEHelp=Kod seçili ama satır yoksa ya da satırlar değiştiği için tevkifat tutarı güncel değilse fatura onaylanamaz; önce "Yeniden hesapla".
+TRTevkifatErrValidateLineMissing=Tevkifat kodu (%s) seçili ama tevkifat satırı yok. Tevkifat sekmesinden "Tevkifat uygula" deyin ya da kodu kaldırın.
+TRTevkifatErrValidateStale=Tevkifat satırı güncel değil (kayıtlı tutar %s, satırlara göre olması gereken %s). Tevkifat sekmesinden "Yeniden hesapla" deyin.
