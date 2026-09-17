@@ -7,7 +7,7 @@ Alış ve satış faturalarında KDV tevkifatını Dolibarr'ın kendi fatura/muh
 | Dolibarr | 20.0+ (24.0 üzerinde geliştirildi ve test edildi) |
 | PHP | 8.1+ |
 | Lisans | GPL-3.0-or-later + yazar atfı şartı ([ATTRIBUTION.md](ATTRIBUTION.md)) |
-| Sürüm | 2.1.0 |
+| Sürüm | 2.1.1 |
 
 Ayrıntılar: [Wiki](https://github.com/mbrksntrk/dolibarr-tevkifat/wiki).
 

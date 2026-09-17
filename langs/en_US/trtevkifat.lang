@@ -1,6 +1,6 @@
 # Copyright (C) 2026 M. Burak Şentürk <https://buraksenturk.net> - GPL-3.0-or-later with attribution terms (ATTRIBUTION.md)
-Module510777Name=VAT Withholding (Türkiye)
-Module510777Desc=KDV tevkifatı line and accounting mapping on supplier and customer invoices
+Module499101Name=VAT Withholding (Türkiye)
+Module499101Desc=KDV tevkifatı line and accounting mapping on supplier and customer invoices
 TRTevkifatTab=Withholding
 TRTevkifatSetup=VAT withholding setup
 TRTevkifatSetupDesc=Withholding is booked as a single negative invoice line (VAT 0%%); the invoice total shows the payable amount and the line is mapped to the account chosen by rate. No core files are touched.

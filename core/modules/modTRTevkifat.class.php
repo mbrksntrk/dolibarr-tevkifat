@@ -19,7 +19,7 @@ class modTRTevkifat extends DolibarrModules
 		global $conf, $langs;
 
 		$this->db = $db;
-		$this->numero = 510777;
+		$this->numero = 499101; // reserved on wiki.dolibarr.org List_of_modules_id (M. Burak Şentürk: 499100-499119)
 		$this->rights_class = 'trtevkifat';
 		$this->family = 'financial';
 		$this->module_position = '91';
@@ -28,7 +28,7 @@ class modTRTevkifat extends DolibarrModules
 		$this->descriptionlong = 'Tevkifatlı faturalarda kesilen KDV\'yi orana göre eşlenen hesaba (360.50.xxx / 391) giden negatif bir fatura satırı olarak işler; fatura toplamı ödenecek tutarı gösterir, yevmiye kayıtları otomatik doğru oluşur.';
 		$this->editor_name = 'M. Burak Şentürk';
 		$this->editor_url = 'https://buraksenturk.net';
-		$this->version = '2.1.0';
+		$this->version = '2.1.1';
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'bill';
 
@@ -69,11 +69,11 @@ class modTRTevkifat extends DolibarrModules
 
 		$this->rights = array();
 		$r = 0;
-		$this->rights[$r][0] = 5107771;
+		$this->rights[$r][0] = 4991011;
 		$this->rights[$r][1] = 'Tevkifat bilgilerini görüntüle';
 		$this->rights[$r][4] = 'read';
 		$r++;
-		$this->rights[$r][0] = 5107772;
+		$this->rights[$r][0] = 4991012;
 		$this->rights[$r][1] = 'Tevkifat uygula / kaldır';
 		$this->rights[$r][4] = 'write';
 
@@ -132,8 +132,8 @@ class modTRTevkifat extends DolibarrModules
 	 */
 	private function cleanupLegacy()
 	{
-		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX.'user_rights WHERE fk_id IN (5001201, 5001202)');
-		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX.'rights_def WHERE id IN (5001201, 5001202)');
+		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX.'user_rights WHERE fk_id IN (5001201, 5001202, 5107771, 5107772)');
+		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX.'rights_def WHERE id IN (5001201, 5001202, 5107771, 5107772)');
 		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX."menu WHERE url LIKE '/trtevkifat/journal.php%'");
 		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX."const WHERE name = 'MAIN_MODULE_TRTEVKIFAT_HOOKS'");
 	}
