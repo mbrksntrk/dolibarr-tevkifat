@@ -1,6 +1,6 @@
 # Copyright (C) 2026 M. Burak Şentürk <https://buraksenturk.net> - GPL-3.0-or-later with attribution terms (ATTRIBUTION.md)
-Module499101Name=KDV Tevkifatı (TR)
-Module499101Desc=Alış ve satış faturalarında KDV tevkifatı satırı ve muhasebe eşlemesi
+Module194092Name=KDV Tevkifatı (TR)
+Module194092Desc=Alış ve satış faturalarında KDV tevkifatı satırı ve muhasebe eşlemesi
 TRTevkifatTab=Tevkifat
 TRTevkifatSetup=KDV Tevkifatı ayarları
 TRTevkifatSetupDesc=Tevkifat, faturaya eklenen tek bir negatif satırla (KDV %%0) işlenir; fatura toplamı ödenecek tutarı gösterir, satır orana göre eşlenen hesaba gider. Çekirdek dosyalara müdahale yoktur.

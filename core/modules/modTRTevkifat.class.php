@@ -19,7 +19,7 @@ class modTRTevkifat extends DolibarrModules
 		global $conf, $langs;
 
 		$this->db = $db;
-		$this->numero = 499101; // reserved on wiki.dolibarr.org List_of_modules_id (M. Burak Şentürk: 499100-499119)
+		$this->numero = 194092; // reserved on wiki.dolibarr.org List_of_modules_id (M. Burak Şentürk: 194091-194100)
 		$this->rights_class = 'trtevkifat';
 		$this->family = 'financial';
 		$this->module_position = '91';
@@ -69,11 +69,11 @@ class modTRTevkifat extends DolibarrModules
 
 		$this->rights = array();
 		$r = 0;
-		$this->rights[$r][0] = 4991011;
+		$this->rights[$r][0] = 1940921;
 		$this->rights[$r][1] = 'Tevkifat bilgilerini görüntüle';
 		$this->rights[$r][4] = 'read';
 		$r++;
-		$this->rights[$r][0] = 4991012;
+		$this->rights[$r][0] = 1940922;
 		$this->rights[$r][1] = 'Tevkifat uygula / kaldır';
 		$this->rights[$r][4] = 'write';
 
@@ -132,8 +132,8 @@ class modTRTevkifat extends DolibarrModules
 	 */
 	private function cleanupLegacy()
 	{
-		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX.'user_rights WHERE fk_id IN (5001201, 5001202, 5107771, 5107772)');
-		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX.'rights_def WHERE id IN (5001201, 5001202, 5107771, 5107772)');
+		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX.'user_rights WHERE fk_id IN (5001201, 5001202, 5107771, 5107772, 4991011, 4991012)');
+		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX.'rights_def WHERE id IN (5001201, 5001202, 5107771, 5107772, 4991011, 4991012)');
 		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX."menu WHERE url LIKE '/trtevkifat/journal.php%'");
 		$this->db->query('DELETE FROM '.MAIN_DB_PREFIX."const WHERE name = 'MAIN_MODULE_TRTEVKIFAT_HOOKS'");
 	}

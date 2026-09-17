@@ -1,5 +1,5 @@
 2.1.1 (2026-09-17)
-- Modül numarası 499101 (wiki.dolibarr.org rezerve aralığı; DoliStore kuralı). Yetki kimlikleri değişti: modülü kapatıp açın ve kullanıcı yetkilerini yeniden verin.
+- Modül numarası 194092 (wiki.dolibarr.org rezerve aralığı; DoliStore kuralı). Yetki kimlikleri değişti: modülü kapatıp açın ve kullanıcı yetkilerini yeniden verin.
 - Sayfalar standart main.inc.php yükleme bloğunu kullanır.
 
 2.1.0 (2026-09-17)
