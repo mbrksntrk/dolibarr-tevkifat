@@ -1,5 +1,7 @@
 # TRTevkifat — Dolibarr için KDV Tevkifatı (Türkiye)
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/mbrksntrk-dolibarr-tevkifat-15tvof)](https://m8ven.ai/mcp/mbrksntrk-dolibarr-tevkifat-15tvof)
+
 Alış ve satış faturalarında KDV tevkifatını Dolibarr'ın kendi fatura/muhasebe akışıyla uyumlu şekilde işleyen modül. Çekirdeğe müdahale yok; tevkifat tek bir fatura satırı olarak temsil edilir, toplamlar ve yevmiye kayıtları otomatik doğru oluşur.
 
 | | |
